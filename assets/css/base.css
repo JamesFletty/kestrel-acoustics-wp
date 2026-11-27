@@ -1,0 +1,28 @@
+/* Kestrel — base: tokens, fonts, reset, typography */
+@font-face{font-family:"Archivo";src:url("../fonts/archivo-wdth.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("../fonts/jetbrains-mono-wght.woff2") format("woff2");font-weight:100 800;font-display:swap}
+:root{
+	--ka-ink:#0D0E10;--ka-panel:#16181C;--ka-panel-2:#1C1F24;--ka-line:#2A2E34;--ka-line-2:#3A3F47;
+	--ka-text:#E2E4E8;--ka-muted:#9AA0AA;--ka-signal:#FF4D1A;--ka-signal-2:#FF7A52;
+	--ka-sans:"Archivo","Helvetica Neue",Arial,sans-serif;--ka-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+	--ka-wrap:1320px;--ka-gutter:clamp(1.25rem,4vw,3rem);--ka-radius:4px;
+	--ka-ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ka-ink);color:var(--ka-text);font:400 1.0625rem/1.6 var(--ka-sans);font-stretch:100%;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{color:var(--ka-signal)}
+h1,h2,h3,h4{margin:0;font-weight:700;font-stretch:78%;line-height:.95;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:2px solid var(--ka-signal);outline-offset:3px}
+.ka-mono{font-family:var(--ka-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.screen-reader-text{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+.ka-skip{position:absolute;left:1rem;top:-4rem;z-index:100;background:var(--ka-signal);color:var(--ka-ink);padding:.6rem 1rem;font-weight:700}
+.ka-skip:focus{top:1rem}
+.ka-main:focus{outline:none}
+address{font-style:normal}
+table{border-collapse:collapse;width:100%}
+::selection{background:var(--ka-signal);color:var(--ka-ink)}

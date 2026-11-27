@@ -1,0 +1,16 @@
+/*
+Theme Name:        Kestrel Acoustics
+Theme URI:         https://kestrel-acoustics.example/
+Author:            James Fletty
+Description:       A hand-built dark product-showcase theme for a boutique studio-monitor and analog mastering hardware maker. Product post type with series taxonomy and a native technical-specs meta box, a server-rendered spec-strip block, accessible spec-sheet/comparison tabs, theme.json tokens, and zero page-builder or jQuery dependencies.
+Version:           1.0.0
+Requires at least: 6.5
+Tested up to:      6.7
+Requires PHP:      8.1
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       kestrel
+Tags:              e-commerce, portfolio, dark, custom-colors, editor-style, translation-ready, accessibility-ready
+*/
+
+/* Front-end styles live in assets/css/ and are enqueued from inc/assets.php. */
