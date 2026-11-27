@@ -1,0 +1,21 @@
+name: Unpack theme files
+on:
+  push:
+    paths:
+      - theme.tar.gz.b64
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack archive into repo root
+        run: |
+          base64 -d theme.tar.gz.b64 | tar -xz
+          git rm -q theme.tar.gz.b64
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add theme files"
+          git push
